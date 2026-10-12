@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-05",
+  "lastUpdated": "2026-10-12",
   "providers": [
     {
       "name": "Aion Labs",
@@ -417,7 +417,7 @@
         },
         {
           "id": null,
-          "name": "+ 55 more models",
+          "name": "+ 56 more models",
           "context": "Varies",
           "maxOutput": "Varies",
           "modality": "Text, Image, Audio, Embeddings",
@@ -644,14 +644,6 @@
           "rateLimit": "200 req/hr"
         },
         {
-          "id": "apodex/apodex-1.1-mini:free",
-          "name": "apodex/apodex-1.1-mini:free",
-          "context": "262K",
-          "maxOutput": "235K",
-          "modality": "Text",
-          "rateLimit": "200 req/hr"
-        },
-        {
           "id": "qwen/qwen3.8-27b:free",
           "name": "qwen/qwen3.8-27b:free",
           "context": "262K",
@@ -664,6 +656,14 @@
           "name": "dots-studio/dots-3-note-preview:free",
           "context": "512K",
           "maxOutput": "460K",
+          "modality": "Text + Vision",
+          "rateLimit": "200 req/hr"
+        },
+        {
+          "id": "stepfun/step-5-preview-free",
+          "name": "stepfun/step-5-preview-free",
+          "context": "1M",
+          "maxOutput": "64K",
           "modality": "Text + Vision",
           "rateLimit": "200 req/hr"
         }
@@ -693,14 +693,6 @@
           "context": "128K",
           "maxOutput": "—",
           "modality": "Text",
-          "rateLimit": "60 RPM, 250 req/hr (free token)"
-        },
-        {
-          "id": "minimax-m2.7",
-          "name": "minimax-m2.7",
-          "context": "180K",
-          "maxOutput": "—",
-          "modality": "Text (reasoning)",
           "rateLimit": "60 RPM, 250 req/hr (free token)"
         },
         {
@@ -1048,6 +1040,14 @@
           "rateLimit": "20 RPM, 50 RPD"
         },
         {
+          "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+          "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+          "context": "256K",
+          "maxOutput": "65K",
+          "modality": "Text + Image + Audio + Video",
+          "rateLimit": "20 RPM, 50 RPD"
+        },
+        {
           "id": null,
           "name": "+ 6 more free models",
           "context": "Varies",
@@ -1078,7 +1078,7 @@
         {
           "id": "gpt-oss-120b",
           "name": "gpt-oss-120b",
-          "context": "128K",
+          "context": "131K",
           "maxOutput": "~32K",
           "modality": "Text",
           "rateLimit": "2 RPM (anonymous)"
@@ -1086,7 +1086,7 @@
         {
           "id": "gpt-oss-20b",
           "name": "gpt-oss-20b",
-          "context": "128K",
+          "context": "131K",
           "maxOutput": "~8K",
           "modality": "Text",
           "rateLimit": "2 RPM (anonymous)"
@@ -1197,7 +1197,7 @@
     },
     {
       "id": 5,
-      "text": "Kilo Code's free pool changes frequently, and the /api/gateway/models catalog can lag what is actually served: probe results have confirmed models absent from the catalog still answering. Rows through liquid/lfm-2.5-2.6b:free answered a live request between 2026-08-19 and 2026-08-21; the rows after it were added on 2026-10-05 from the catalog, where they are priced at $0, and have not been probed. Free models are reachable with no API key, at 200 requests per hour per IP ([authentication](https://kilo.ai/docs/gateway/authentication)). The kilo-auto/free router picks a model from the free pool, and Kilo's docs warn it \"may route your requests to providers that log prompts and outputs\". The NVIDIA free endpoints carry NVIDIA's own condition, quoted on Kilo's [models page](https://kilo.ai/docs/gateway/models-and-providers): \"Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services.\""
+      "text": "Kilo Code's free pool changes frequently, and the /api/gateway/models catalog can lag what is actually served: probe results have confirmed models absent from the catalog still answering. Rows through liquid/lfm-2.5-2.6b:free answered a live request between 2026-08-19 and 2026-08-21; the rows after it were added on 2026-10-05 (stepfun/step-5-preview-free on 2026-10-12) from the catalog, where they are priced at $0, and have not been probed. Free models are reachable with no API key, at 200 requests per hour per IP ([authentication](https://kilo.ai/docs/gateway/authentication)). The kilo-auto/free router picks a model from the free pool, and Kilo's docs warn it \"may route your requests to providers that log prompts and outputs\". The NVIDIA free endpoints carry NVIDIA's own condition, quoted on Kilo's [models page](https://kilo.ai/docs/gateway/models-and-providers): \"Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services.\""
     },
     {
       "id": 6,
